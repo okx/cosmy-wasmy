@@ -18,7 +18,7 @@ export class WasmVmPanel {
         this._panel = panel;
         this._wasmBinary = wasm;
         this._app = new CWSimulateApp({
-            chainId: 'cosmy-wasmy-1',
+            chainId: 'okx-wasmy-1',
             bech32Prefix: 'test'
         });
         this._codeId = this._app.wasm.create('', this._wasmBinary);

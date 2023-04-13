@@ -51,7 +51,7 @@ export class ContractDataProvider implements vscode.TreeDataProvider<Contract> {
 			contract.iconPath = contract.chainConfig == global.workspaceChain.configName ? "" : new vscode.ThemeIcon("debug-disconnect");
 			contract.command = {
 				title: vscode.l10n.t("Select Contract"),
-				command: "cosmy-wasmy.selectContract",
+				command: "okx-wasmy.selectContract",
 				arguments: [contract]
 			};
 		}

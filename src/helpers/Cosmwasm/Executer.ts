@@ -83,7 +83,7 @@ export class Executer {
         }, async (progress, token) => {
             token.onCancellationRequested(() => { });
             progress.report({ message: '' });
-            const tx = await Cosmwasm.Execute(account, contract.contractAddress, req, "Sent from cosmy-wasmy", value.funds);
+            const tx = await Cosmwasm.Execute(account, contract.contractAddress, req, "Sent from okx-wasmy", value.funds);
             const url = global.workspaceChain.txExplorerLink;
             if (tx.isSuccess && url) {
                 const explorerUrl = url.replace("${txHash}", tx.response.transactionHash);

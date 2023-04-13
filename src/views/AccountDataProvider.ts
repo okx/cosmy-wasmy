@@ -31,7 +31,7 @@ export class AccountDataProvider implements vscode.TreeDataProvider<Account> {
 		account.contextValue = Constants.VIEWS_ACCOUNT;
 		account.command = {
 			title: vscode.l10n.t("Select Account"),
-			command: "cosmy-wasmy.selectAccount",
+			command: "okx-wasmy.selectAccount",
 			arguments: [account]
 		};
 		return account;

@@ -30,7 +30,7 @@ export class Commands {
 	}
 
 	private static registerReloadConfigCmd(context: vscode.ExtensionContext, accountViewProvider: AccountDataProvider, contractViewProvider: ContractDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.reloadConfig', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.reloadConfig', async () => {
 			try {
 				const chainConfigs = Workspace.GetChainConfigs();
 				let chainPicks: vscode.QuickPickItem[] = [];
@@ -110,7 +110,7 @@ export class Commands {
 	}
 
 	private static registerRecordCWCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.recordCW', () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.recordCW', () => {
 			Workspace.ToggleRecordCW();
 			Utils.ShowRecordStatusItem();
 		});
@@ -118,7 +118,7 @@ export class Commands {
 	}
 
 	private static syncBeakerTomlCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.beakerTomlSync', async (item: vscode.Uri) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.beakerTomlSync', async (item: vscode.Uri) => {
 			if (item) {
 				await Utils.BeakerSync(item, context);
 				vscode.window.showInformationMessage(vscode.l10n.t("Finished syncing accounts and chains from Beaker.toml"))
@@ -128,7 +128,7 @@ export class Commands {
 	}
 
 	private static createNewCWNotebookCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.createCwNotebook', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.createCwNotebook', async () => {
 			let cells: vscode.NotebookCellData[] = getNotebookText();
 			let data = new vscode.NotebookData(cells) 
 			let doc = await vscode.workspace.openNotebookDocument(Constants.VIEWS_NOTEBOOK, data);
@@ -137,7 +137,7 @@ export class Commands {
 			function getNotebookText() {
 				let cells: vscode.NotebookCellData[] = [new vscode.NotebookCellData(vscode.NotebookCellKind.Markup, "## CW Notebook (Sample)", Constants.LANGUAGE_MARKDOWN)];
 				cells.push(new vscode.NotebookCellData(vscode.NotebookCellKind.Markup, 'You can create a CW notebook with config pointing to a wasm binary and the schema file and this allows anyone with the notebook to play with the contract locally in a virtual machine.', Constants.LANGUAGE_MARKDOWN));
-				cells.push(new vscode.NotebookCellData(vscode.NotebookCellKind.Code, '[config]\r\ncontract-url = \"https://github.com/spoo-bar/cosmy-wasmy/raw/ec4b29d02eddeb9b5abe54ca2785265815238987/docs/contract/cosmy_wasmy_test.wasm\" # the http link to the smart contract which is downloaded to be used in the vm\r\nschema-url = \"https://github.com/spoo-bar/cosmy-wasmy/raw/ec4b29d02eddeb9b5abe54ca2785265815238987/docs/contract/counter.json\" # the http link to the json schema file for the contract e.g counter.json. Without this, the notebook kernel will not know how to process the input', Constants.LANGUAGE_TOML));
+				cells.push(new vscode.NotebookCellData(vscode.NotebookCellKind.Code, '[config]\r\ncontract-url = \"https://github.com/spoo-bar/okx-wasmy/raw/ec4b29d02eddeb9b5abe54ca2785265815238987/docs/contract/okx_wasmy_test.wasm\" # the http link to the smart contract which is downloaded to be used in the vm\r\nschema-url = \"https://github.com/spoo-bar/okx-wasmy/raw/ec4b29d02eddeb9b5abe54ca2785265815238987/docs/contract/counter.json\" # the http link to the json schema file for the contract e.g counter.json. Without this, the notebook kernel will not know how to process the input', Constants.LANGUAGE_TOML));
 				cells.push(new vscode.NotebookCellData(vscode.NotebookCellKind.Markup, 'You can add any *markdown* **formatted** text in the notebook. You can also add input `json` which is used to input to the smart contract.', Constants.LANGUAGE_MARKDOWN));
 				cells.push(new vscode.NotebookCellData(vscode.NotebookCellKind.Markup, '#### Step 1\r\nInitialize the contract. To be able to query/exec the contraact, it needs to first be initialized in the vm', Constants.LANGUAGE_MARKDOWN));
 				cells.push(new vscode.NotebookCellData(vscode.NotebookCellKind.Code, '{\r\n    \"count\": 10 \r\n}', Constants.LANGUAGE_JSON));

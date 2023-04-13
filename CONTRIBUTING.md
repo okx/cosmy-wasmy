@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for considering making contributions to Cosmy Wasmy!
+Thank you for considering making contributions to Okx Wasmy!
 
 There are two ways you can contribute to the extension:
 1. Code contributions - Bug fixes, new features, refactors etc
@@ -10,8 +10,8 @@ There are two ways you can contribute to the extension:
 
 The general procedure for contributing is:
 
-1. Start by browsing [new issues](https://github.com/spoo-bar/cosmy-wasmy/issues).
-   * Looking for a good place to start contributing? How about checking out some [good first issues](https://github.com/spoo-bar/cosmy-wasmy/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) or [bugs](https://github.com/spoo-bar/cosmy-wasmy/issues?q=is%3Aopen+is%3Aissue+label%3Abug)?
+1. Start by browsing [new issues](https://github.com/spoo-bar/okx-wasmy/issues).
+   * Looking for a good place to start contributing? How about checking out some [good first issues](https://github.com/spoo-bar/okx-wasmy/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) or [bugs](https://github.com/spoo-bar/okx-wasmy/issues?q=is%3Aopen+is%3Aissue+label%3Abug)?
    * Create an issue if you have an interesting idea you would like included in the extension
 2. Comment on the issue that you would like to work on it. Once you have been assigned to the Github issue, you can start with the item. (This is to ensure the item isnt actively being worked on already)
 3. To submit your work as a contribution to the repository follow standard GitHub best practices. See [pull request guideline](#pull-requests) below.

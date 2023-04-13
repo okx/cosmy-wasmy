@@ -21,7 +21,7 @@ export class AccountCmds {
 
 
 	private static registerAddAccountCmd(context: vscode.ExtensionContext, accountViewProvider: AccountDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.addAccount', () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.addAccount', () => {
 			vscode.window.showInputBox({
 				title: vscode.l10n.t("Account Label"),
 				value: vscode.l10n.t("testAccount"),
@@ -78,7 +78,7 @@ export class AccountCmds {
 	}
 
 	private static registerRequestFundsCmd(context: vscode.ExtensionContext, accountViewProvider: AccountDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.requestFunds', async (item: Account) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.requestFunds', async (item: Account) => {
 			if (item.address) {
 				if (global.workspaceChain.faucetEndpoint) {
 					vscode.window.withProgress({
@@ -114,7 +114,7 @@ export class AccountCmds {
 	}
 
 	private static registerOpenInExplorerCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.openInExplorer', (item: Account) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.openInExplorer', (item: Account) => {
 			const url = global.workspaceChain.accountExplorerLink;
 			const explorerUrl = url.replace("${accountAddress}", item.address);
 			vscode.env.openExternal(vscode.Uri.parse(explorerUrl));
@@ -123,7 +123,7 @@ export class AccountCmds {
 	}
 
 	private static registerCopyAccountAddressCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.copyAddress', (item: Account | Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.copyAddress', (item: Account | Contract) => {
 			let address = "";
 			if ((item as Account).address) {
 				address = (item as Account).address;
@@ -144,7 +144,7 @@ export class AccountCmds {
 	}
 
 	private static registerCopyMnemonicCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.copyMnemonic', (item: Account) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.copyMnemonic', (item: Account) => {
 			if (item.mnemonic) {
 				vscode.env.clipboard.writeText(item.mnemonic).then(() => {
 					vscode.window.showInformationMessage(vscode.l10n.t("Copied to clipboard: {seed}", { seed: item.mnemonic }));
@@ -158,7 +158,7 @@ export class AccountCmds {
 	}
 
 	private static registerDeleteAddressCmd(context: vscode.ExtensionContext, accountViewProvider: AccountDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.deleteAccount', (item: Account) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.deleteAccount', (item: Account) => {
 			vscode.window.showQuickPick(["Yes", "No"], {
 				title: vscode.l10n.t("Are you sure you want to delete the account {label}?", { label: item.label }),
 				placeHolder: vscode.l10n.t("Are you sure you want to delete the account {label} ?", { label: item.label }),
@@ -175,14 +175,14 @@ export class AccountCmds {
 	}
 
 	private static registerSelectAccountCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.selectAccount', (account: Account) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.selectAccount', (account: Account) => {
 			Workspace.SetSelectedAccount(account);
 		});
 		context.subscriptions.push(disposable);
 	}
 
 	private static registerRefreshAccountCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.refreshAccount', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.refreshAccount', async () => {
 			vscode.window.withProgress({
 				location: { viewId: Constants.VIEWS_ACCOUNT },
 				title: vscode.l10n.t("Refreshing account view"),

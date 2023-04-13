@@ -76,7 +76,7 @@ export class TestExplorer {
             hideFromUser: true,
             location: vscode.TerminalLocation.Panel,
             name: "Cosmwasm Tests",
-            message: "Cosmwasm test terminal - created by Cosmy Wasmy ⚛️"
+            message: "Cosmwasm test terminal - created by Okx Wasmy ⚛️"
         });
     }
 

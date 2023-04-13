@@ -21,7 +21,7 @@ export class Utils {
     public static CreateConnectedChainStatusItem() {
         this.selectedChain = vscode.window.createStatusBarItem(Constants.STATUSBAR_ID_SELECTED_CONFIG, vscode.StatusBarAlignment.Left);
         this.selectedChain.tooltip = vscode.l10n.t("Select a different Chain");
-        this.selectedChain.command = "cosmy-wasmy.reloadConfig";
+        this.selectedChain.command = "okx-wasmy.reloadConfig";
         this.selectedChain.text = "$(debug-disconnect) " + vscode.l10n.t("Not connected to any chain");
         this.UpdateConnectedChainStatusItem();
     }
@@ -30,14 +30,14 @@ export class Utils {
         if (Workspace.GetRecordCW()) {
             // Not recording currently
             this.recordStatus.tooltip = "Stop recording CW API interactions";
-            this.recordStatus.command = "cosmy-wasmy.recordCW";
+            this.recordStatus.command = "okx-wasmy.recordCW";
             this.recordStatus.text = "$(stop) Stop recording";
             this.recordStatus.show();
         }
         else {
             // Recording currently
             this.recordStatus.tooltip = "Start recording CW API interactions";
-            this.recordStatus.command = "cosmy-wasmy.recordCW";
+            this.recordStatus.command = "okx-wasmy.recordCW";
             this.recordStatus.text = "$(record) Start recording ";
             this.recordStatus.show();
         }

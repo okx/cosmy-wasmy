@@ -11,7 +11,7 @@ export class CosmwasmCmds {
 		this.registerTxCosmwasmCmd(context);
 	}
 	private static registerQueryHistoryCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.history', () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.history', () => {
 			if (Workspace.GetCosmwasmQueriesStored() == 0) {
 				vscode.window.showErrorMessage(vscode.l10n.t("Feature disabled: Cosmwasm Query History. In the settings, set `{config}` to a non-zero value.", {
 					config: Constants.CONFIGURATION_HISTORY_STORED
@@ -34,7 +34,7 @@ export class CosmwasmCmds {
 	}
 
 	private static registerQueryCosmwasmCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.queryCosmwasm', (jsonFile: vscode.Uri) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.queryCosmwasm', (jsonFile: vscode.Uri) => {
 			if (jsonFile) {
 				vscode.workspace.openTextDocument(jsonFile).then((document) => {
 					let jsonInput = document.getText();
@@ -55,7 +55,7 @@ export class CosmwasmCmds {
 	}
 
 	private static registerTxCosmwasmCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.execCosmwasm', (jsonFile: vscode.Uri) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.execCosmwasm', (jsonFile: vscode.Uri) => {
 			if (jsonFile) {
 				vscode.workspace.openTextDocument(jsonFile).then((document) => {
 					let jsonInput = {

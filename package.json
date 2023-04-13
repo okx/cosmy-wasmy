@@ -1,13 +1,13 @@
 {
-  "name": "cosmy-wasmy",
-  "displayName": "Cosmy Wasmy",
-  "description": "wibbly wobbly cosmy wasmy tool to interact with cosmwasm smart contracts",
-  "version": "2.2.0",
+  "name": "okx-wasmy",
+  "displayName": "OKX Wasmy",
+  "description": "wibbly wobbly okx wasmy tool to interact with cosmwasm smart contracts",
+  "version": "0.1.14",
   "preview": false,
-  "publisher": "Spoorthi",
+  "publisher": "okx-com",
   "icon": "media/icon.png",
   "license": "SEE LICENSE IN LICENSE",
-  "repository": "https://github.com/spoo-bar/cosmy-wasmy",
+  "repository": "https://github.com/spoo-bar/okx-wasmy",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -41,21 +41,21 @@
   "capabilities": {
     "untrustedWorkspaces": {
       "supported": "limited",
-      "description": "%cosmy-wasmy.capabilities.trustedWorkspace.description%"
+      "description": "%okx-wasmy.capabilities.trustedWorkspace.description%"
     }
   },
   "contributes": {
     "commands": [
       {
-        "command": "cosmy-wasmy.addAccount",
-        "title": "%cosmy-wasmy.addAccount.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.addAccount",
+        "title": "%okx-wasmy.addAccount.title%",
+        "category": "Okx Wasmy",
         "icon": "$(add)"
       },
       {
-        "command": "cosmy-wasmy.requestFunds",
-        "title": "%cosmy-wasmy.requestFunds.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.requestFunds",
+        "title": "%okx-wasmy.requestFunds.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == account",
         "icon": {
           "light": "media/icons/light/fund.svg",
@@ -63,226 +63,226 @@
         }
       },
       {
-        "command": "cosmy-wasmy.openInExplorer",
-        "title": "%cosmy-wasmy.openInExplorer.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.openInExplorer",
+        "title": "%okx-wasmy.openInExplorer.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == account",
         "icon": "$(link-external)"
       },
       {
-        "command": "cosmy-wasmy.copyAddress",
-        "title": "%cosmy-wasmy.copyAddress.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.copyAddress",
+        "title": "%okx-wasmy.copyAddress.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == account || viewItem == contract"
       },
       {
-        "command": "cosmy-wasmy.copyMnemonic",
-        "title": "%cosmy-wasmy.copyMnemonic.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.copyMnemonic",
+        "title": "%okx-wasmy.copyMnemonic.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == account"
       },
       {
-        "command": "cosmy-wasmy.deleteAccount",
-        "title": "%cosmy-wasmy.deleteAccount.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.deleteAccount",
+        "title": "%okx-wasmy.deleteAccount.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == account"
       },
       {
-        "command": "cosmy-wasmy.refreshAccount",
-        "title": "%cosmy-wasmy.refreshAccount.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.refreshAccount",
+        "title": "%okx-wasmy.refreshAccount.title%",
+        "category": "Okx Wasmy",
         "icon": "$(refresh)"
       },
       {
-        "command": "cosmy-wasmy.addContract",
-        "title": "%cosmy-wasmy.addContract.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.addContract",
+        "title": "%okx-wasmy.addContract.title%",
+        "category": "Okx Wasmy",
         "icon": "$(add)"
       },
       {
-        "command": "cosmy-wasmy.deleteContract",
-        "title": "%cosmy-wasmy.deleteContract.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.deleteContract",
+        "title": "%okx-wasmy.deleteContract.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == contract"
       },
       {
-        "command": "cosmy-wasmy.updateContractAdmin",
-        "title": "%cosmy-wasmy.updateContractAdmin.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.updateContractAdmin",
+        "title": "%okx-wasmy.updateContractAdmin.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == contract"
       },
       {
-        "command": "cosmy-wasmy.clearContractAdmin",
-        "title": "%cosmy-wasmy.clearContractAdmin.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.clearContractAdmin",
+        "title": "%okx-wasmy.clearContractAdmin.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == contract"
       },
       {
-        "command": "cosmy-wasmy.getContractChecksum",
-        "title": "%cosmy-wasmy.getContractChecksum.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.getContractChecksum",
+        "title": "%okx-wasmy.getContractChecksum.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == contract"
       },
       {
-        "command": "cosmy-wasmy.downloadContractBinary",
-        "title": "%cosmy-wasmy.downloadContractBinary.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.downloadContractBinary",
+        "title": "%okx-wasmy.downloadContractBinary.title%",
+        "category": "Okx Wasmy",
         "enablement": "viewItem == contract"
       },
       {
-        "command": "cosmy-wasmy.reloadConfig",
-        "title": "%cosmy-wasmy.reloadConfig.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.reloadConfig",
+        "title": "%okx-wasmy.reloadConfig.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.resetData",
-        "title": "%cosmy-wasmy.resetData.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.resetData",
+        "title": "%okx-wasmy.resetData.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.build",
-        "title": "%cosmy-wasmy.build.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.build",
+        "title": "%okx-wasmy.build.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.runUnitTests",
-        "title": "%cosmy-wasmy.runUnitTests.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.runUnitTests",
+        "title": "%okx-wasmy.runUnitTests.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.optimizeContract",
-        "title": "%cosmy-wasmy.optimizeContract.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.optimizeContract",
+        "title": "%okx-wasmy.optimizeContract.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.generateSchema",
-        "title": "%cosmy-wasmy.generateSchema.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.generateSchema",
+        "title": "%okx-wasmy.generateSchema.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.setupDevEnv",
-        "title": "%cosmy-wasmy.setupDevEnv.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.setupDevEnv",
+        "title": "%okx-wasmy.setupDevEnv.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.upload",
-        "title": "%cosmy-wasmy.upload.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.upload",
+        "title": "%okx-wasmy.upload.title%",
+        "category": "Okx Wasmy",
         "icon": "$(cloud-upload)"
       },
       {
-        "command": "cosmy-wasmy.wasmInteract",
-        "title": "%cosmy-wasmy.wasmInteract.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.wasmInteract",
+        "title": "%okx-wasmy.wasmInteract.title%",
+        "category": "Okx Wasmy",
         "icon": "$(server-process)"
       },
       {
-        "command": "cosmy-wasmy.history",
-        "title": "%cosmy-wasmy.history.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.history",
+        "title": "%okx-wasmy.history.title%",
+        "category": "Okx Wasmy",
         "icon": "$(history)"
       },
       {
-        "command": "cosmy-wasmy.export",
-        "title": "%cosmy-wasmy.export.title%",
-        "category": "Cosmy Wasmy",
-        "shortTitle": "Export Cosmy Wasmy data"
+        "command": "okx-wasmy.export",
+        "title": "%okx-wasmy.export.title%",
+        "category": "Okx Wasmy",
+        "shortTitle": "Export Okx Wasmy data"
       },
       {
-        "command": "cosmy-wasmy.addComments",
-        "title": "%cosmy-wasmy.addComments.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.addComments",
+        "title": "%okx-wasmy.addComments.title%",
+        "category": "Okx Wasmy",
         "icon": "$(comment)",
         "enablement": "viewItem == contract"
       },
       {
-        "command": "cosmy-wasmy.queryCosmwasm",
-        "title": "%cosmy-wasmy.queryCosmwasm.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.queryCosmwasm",
+        "title": "%okx-wasmy.queryCosmwasm.title%",
+        "category": "Okx Wasmy",
         "enablement": "resourceLangId == json"
       },
       {
-        "command": "cosmy-wasmy.execCosmwasm",
-        "title": "%cosmy-wasmy.execCosmwasm.title%",
-        "category": "Cosmy Wasmy",
+        "command": "okx-wasmy.execCosmwasm",
+        "title": "%okx-wasmy.execCosmwasm.title%",
+        "category": "Okx Wasmy",
         "enablement": "resourceLangId == json"
       },
       {
-        "command": "cosmy-wasmy.beakerTomlSync",
-        "title": "%cosmy-wasmy.beakerTomlSync.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.beakerTomlSync",
+        "title": "%okx-wasmy.beakerTomlSync.title%",
+        "category": "Okx Wasmy"
       },
       {
-        "command": "cosmy-wasmy.createCwNotebook",
-        "title": "%cosmy-wasmy.createCwNotebook.title%",
-        "category": "Cosmy Wasmy"
+        "command": "okx-wasmy.createCwNotebook",
+        "title": "%okx-wasmy.createCwNotebook.title%",
+        "category": "Okx Wasmy"
       }
     ],
     "configuration": [
       {
-        "title": "Cosmy Wasmy",
+        "title": "Okx Wasmy",
         "properties": {
-          "cosmywasmy.chainConfigName": {
+          "okxwasmy.chainConfigName": {
             "type": "string",
-            "markdownDescription": "%cosmywasmy.chainConfigName.desc%",
+            "markdownDescription": "%okxwasmy.chainConfigName.desc%",
             "scope": "resource",
             "order": 0,
             "default": "Juno UNI-5 testnet",
-            "deprecationMessage": "%cosmywasmy.chainConfigName.deprecationDesc%"
+            "deprecationMessage": "%okxwasmy.chainConfigName.deprecationDesc%"
           },
-          "cosmywasmy.chains": {
+          "okxwasmy.chains": {
             "type": "array",
-            "markdownDescription": "%cosmywasmy.chains.desc%",
+            "markdownDescription": "%okxwasmy.chains.desc%",
             "scope": "application",
             "order": 1,
             "minItems": 1,
             "editPresentation": "multilineText",
             "items": {
               "type": "object",
-              "title": "%cosmywasmy.chains.items.title%",
+              "title": "%okxwasmy.chains.items.title%",
               "properties": {
                 "configName": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.configName.desc%"
+                  "description": "%okxwasmy.chains.items.configName.desc%"
                 },
                 "chainId": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.chainId.desc%"
+                  "description": "%okxwasmy.chains.items.chainId.desc%"
                 },
                 "chainEnvironment": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.chainEnvironment.desc%",
+                  "description": "%okxwasmy.chains.items.chainEnvironment.desc%",
                   "enum": [
                     "localnet",
                     "testnet",
                     "mainnet"
                   ],
                   "enumDescriptions": [
-                    "%cosmywasmy.chains.items.chainEnvironment.localnet.desc%",
-                    "%cosmywasmy.chains.items.chainEnvironment.testnet.desc%",
-                    "%cosmywasmy.chains.items.chainEnvironment.mainnet.desc%"
+                    "%okxwasmy.chains.items.chainEnvironment.localnet.desc%",
+                    "%okxwasmy.chains.items.chainEnvironment.testnet.desc%",
+                    "%okxwasmy.chains.items.chainEnvironment.mainnet.desc%"
                   ],
                   "default": "testnet"
                 },
                 "addressPrefix": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.addressPrefix.desc%"
+                  "description": "%okxwasmy.chains.items.addressPrefix.desc%"
                 },
                 "rpcEndpoint": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.rpcEndpoint.desc%"
+                  "description": "%okxwasmy.chains.items.rpcEndpoint.desc%"
                 },
                 "defaultGasPrice": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.defaultGasPrice.desc%"
+                  "description": "%okxwasmy.chains.items.defaultGasPrice.desc%"
                 },
                 "chainGasDenom": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.chainGasDenom.desc%"
+                  "description": "%okxwasmy.chains.items.chainGasDenom.desc%"
                 },
                 "chainDenomDecimals": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.chainDenomDecimals.desc%"
+                  "description": "%okxwasmy.chains.items.chainDenomDecimals.desc%"
                 },
                 "signType": {
                   "type": "string",
@@ -291,30 +291,30 @@
                     "ethsecp256k1"
                   ],
                   "default": "tmsecp256k1",
-                  "description": "%cosmywasmy.chains.items.signType.desc%",
+                  "description": "%okxwasmy.chains.items.signType.desc%",
                   "enumDescriptions": [
-                    "%cosmywasmy.chains.items.signType.tmsecp256k1.desc%",
-                    "%cosmywasmy.chains.items.signType.ethsecp256k1.desc%"
+                    "%okxwasmy.chains.items.signType.tmsecp256k1.desc%",
+                    "%okxwasmy.chains.items.signType.ethsecp256k1.desc%"
                   ]
                 },
                 "chainDenom": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.chainDenom.desc%"
+                  "description": "%okxwasmy.chains.items.chainDenom.desc%"
                 },
                 "faucetEndpoint": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.faucetEndpoint.desc%"
+                  "description": "%okxwasmy.chains.items.faucetEndpoint.desc%"
                 },
                 "accountExplorerLink": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.accountExplorerLink.desc%",
+                  "description": "%okxwasmy.chains.items.accountExplorerLink.desc%",
                   "examples": [
                     "https://testnet.mintscan.io/juno-testnet/account/${accountAddress}"
                   ]
                 },
                 "txExplorerLink": {
                   "type": "string",
-                  "description": "%cosmywasmy.chains.items.txExplorerLink.desc%",
+                  "description": "%okxwasmy.chains.items.txExplorerLink.desc%",
                   "examples": [
                     "https://testnet.mintscan.io/juno-testnet/txs/${txHash}"
                   ]
@@ -433,7 +433,7 @@
               }
             ]
           },
-          "cosmywasmy.contractSortOrder": {
+          "okxwasmy.contractSortOrder": {
             "type": "string",
             "enum": [
               "Alphabetical",
@@ -441,42 +441,42 @@
               "None"
             ],
             "enumDescriptions": [
-              "%cosmywasmy.contractSortOrder.alphabetical.desc%",
-              "%cosmywasmy.contractSortOrder.codeId.desc%",
-              "%cosmywasmy.contractSortOrder.none.desc%"
+              "%okxwasmy.contractSortOrder.alphabetical.desc%",
+              "%okxwasmy.contractSortOrder.codeId.desc%",
+              "%okxwasmy.contractSortOrder.none.desc%"
             ],
             "order": 2,
             "default": "None",
-            "description": "%cosmywasmy.contractSortOrder.desc%",
+            "description": "%okxwasmy.contractSortOrder.desc%",
             "scope": "resource"
           },
-          "cosmywasmy.cosmwasmResponseView": {
+          "okxwasmy.cosmwasmResponseView": {
             "type": "string",
             "enum": [
               "NewFile",
               "Terminal"
             ],
             "enumDescriptions": [
-              "%cosmywasmy.cosmwasmResponseView.newFile.desc%",
-              "%cosmywasmy.cosmwasmResponseView.terminal.desc%"
+              "%okxwasmy.cosmwasmResponseView.newFile.desc%",
+              "%okxwasmy.cosmwasmResponseView.terminal.desc%"
             ],
             "order": 3,
             "default": "Terminal",
-            "description": "%cosmywasmy.cosmwasmResponseView.desc%",
+            "description": "%okxwasmy.cosmwasmResponseView.desc%",
             "scope": "resource"
           },
-          "cosmywasmy.maxHistoryStored": {
+          "okxwasmy.maxHistoryStored": {
             "type": "number",
-            "markdownDescription": "%cosmywasmy.maxHistoryStored.desc%",
+            "markdownDescription": "%okxwasmy.maxHistoryStored.desc%",
             "order": 4,
             "default": 20,
             "minimum": 0,
             "maximum": 500,
             "scope": "resource"
           },
-          "cosmywasmy.openTxExplorerInVscode": {
+          "okxwasmy.openTxExplorerInVscode": {
             "type": "boolean",
-            "markdownDescription": "%cosmywasmy.openTxExplorerInVscode.desc%",
+            "markdownDescription": "%okxwasmy.openTxExplorerInVscode.desc%",
             "order": 5,
             "default": false,
             "scope": "resource"
@@ -492,27 +492,27 @@
     ],
     "keybindings": [
       {
-        "command": "cosmy-wasmy.build",
+        "command": "okx-wasmy.build",
         "key": "ctrl+shift+b"
       },
       {
-        "command": "cosmy-wasmy.runUnitTests",
+        "command": "okx-wasmy.runUnitTests",
         "key": "ctrl+shift+t"
       },
       {
-        "command": "cosmy-wasmy.optimizeContract",
+        "command": "okx-wasmy.optimizeContract",
         "key": "ctrl+shift+o"
       },
       {
-        "command": "cosmy-wasmy.generateSchema",
+        "command": "okx-wasmy.generateSchema",
         "key": "ctrl+shift+g"
       },
       {
-        "command": "cosmy-wasmy.upload",
+        "command": "okx-wasmy.upload",
         "key": "ctrl+shift+u"
       },
       {
-        "command": "cosmy-wasmy.history",
+        "command": "okx-wasmy.history",
         "key": "ctrl+shift+a"
       }
     ],
@@ -534,138 +534,138 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "cosmy-wasmy.upload",
+          "command": "okx-wasmy.upload",
           "when": "resourceExtname == .wasm"
         },
         {
-          "command": "cosmy-wasmy.wasmInteract",
+          "command": "okx-wasmy.wasmInteract",
           "when": "resourceExtname == .wasm"
         },
         {
-          "command": "cosmy-wasmy.beakerTomlSync",
+          "command": "okx-wasmy.beakerTomlSync",
           "when": "resourceFilename == Beaker.toml"
         }
       ],
       "editor/context": [
         {
-          "command": "cosmy-wasmy.queryCosmwasm",
+          "command": "okx-wasmy.queryCosmwasm",
           "when": "resourceLangId == json",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.execCosmwasm",
+          "command": "okx-wasmy.execCosmwasm",
           "when": "resourceLangId == json",
           "group": "navigation"
         }
       ],
       "editor/title": [
         {
-          "command": "cosmy-wasmy.upload",
+          "command": "okx-wasmy.upload",
           "when": "resourceExtname == .wasm",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.wasmInteract",
+          "command": "okx-wasmy.wasmInteract",
           "when": "resourceExtname == .wasm",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.queryCosmwasm",
+          "command": "okx-wasmy.queryCosmwasm",
           "when": "resourceLangId == json",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.execCosmwasm",
+          "command": "okx-wasmy.execCosmwasm",
           "when": "resourceLangId == json",
           "group": "navigation"
         }
       ],
       "editor/title/context": [
         {
-          "command": "cosmy-wasmy.upload",
+          "command": "okx-wasmy.upload",
           "when": "resourceExtname == .wasm"
         }
       ],
       "view/title": [
         {
-          "command": "cosmy-wasmy.addAccount",
+          "command": "okx-wasmy.addAccount",
           "when": "view == account",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.refreshAccount",
+          "command": "okx-wasmy.refreshAccount",
           "when": "view == account",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.addContract",
+          "command": "okx-wasmy.addContract",
           "when": "view == contract",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.history",
+          "command": "okx-wasmy.history",
           "when": "view == query || view == execute",
           "group": "navigation"
         },
         {
-          "command": "cosmy-wasmy.upload",
+          "command": "okx-wasmy.upload",
           "when": "view == contract",
           "group": "navigation"
         }
       ],
       "view/item/context": [
         {
-          "command": "cosmy-wasmy.requestFunds",
+          "command": "okx-wasmy.requestFunds",
           "when": "view == account && showRequestFunds",
           "group": "inline"
         },
         {
-          "command": "cosmy-wasmy.openInExplorer",
+          "command": "okx-wasmy.openInExplorer",
           "when": "view == account && showOpenInExplorer",
           "group": "inline"
         },
         {
-          "command": "cosmy-wasmy.copyAddress",
+          "command": "okx-wasmy.copyAddress",
           "when": "view == account || view == contract",
           "group": "cutcopypaste"
         },
         {
-          "command": "cosmy-wasmy.copyMnemonic",
+          "command": "okx-wasmy.copyMnemonic",
           "when": "view == account",
           "group": "cutcopypaste"
         },
         {
-          "command": "cosmy-wasmy.addComments",
+          "command": "okx-wasmy.addComments",
           "when": "view == contract",
           "group": "inline"
         },
         {
-          "command": "cosmy-wasmy.updateContractAdmin",
+          "command": "okx-wasmy.updateContractAdmin",
           "when": "view == contract",
           "group": "modify"
         },
         {
-          "command": "cosmy-wasmy.clearContractAdmin",
+          "command": "okx-wasmy.clearContractAdmin",
           "when": "view == contract",
           "group": "modify"
         },
         {
-          "command": "cosmy-wasmy.getContractChecksum",
+          "command": "okx-wasmy.getContractChecksum",
           "when": "view == contract",
           "group": "details"
         },
         {
-          "command": "cosmy-wasmy.downloadContractBinary",
+          "command": "okx-wasmy.downloadContractBinary",
           "when": "view == contract",
           "group": "details"
         },
         {
-          "command": "cosmy-wasmy.deleteAccount",
+          "command": "okx-wasmy.deleteAccount",
           "when": "view == account",
           "group": "z_delete"
         },
         {
-          "command": "cosmy-wasmy.deleteContract",
+          "command": "okx-wasmy.deleteContract",
           "when": "view == contract",
           "group": "z_delete"
         }
@@ -683,7 +683,7 @@
       }
     ],
     "views": {
-      "cosmy-wasmy": [
+      "okx-wasmy": [
         {
           "id": "account",
           "name": "Account",
@@ -731,8 +731,8 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "cosmy-wasmy",
-          "title": "Cosmy Wasmy",
+          "id": "okx-wasmy",
+          "title": "Okx Wasmy",
           "icon": "media/icon.svg"
         }
       ]
@@ -740,37 +740,37 @@
     "viewsWelcome": [
       {
         "view": "account",
-        "contents": "%cosmywasmy.viewsWelcome.account.desc%"
+        "contents": "%okxwasmy.viewsWelcome.account.desc%"
       },
       {
         "view": "contract",
-        "contents": "%cosmywasmy.viewsWelcome.contract.desc%"
+        "contents": "%okxwasmy.viewsWelcome.contract.desc%"
       }
     ],
     "walkthroughs": [
       {
-        "id": "cosmy-wasmy",
-        "title": "%cosmywasmy.walkthroughs.title%",
-        "description": "%cosmywasmy.walkthroughs.description%",
+        "id": "okx-wasmy",
+        "title": "%okxwasmy.walkthroughs.title%",
+        "description": "%okxwasmy.walkthroughs.description%",
         "steps": [
           {
             "id": "openCWView",
-            "title": "%cosmywasmy.walkthroughs.primary.openCWView.title%",
-            "description": "%cosmywasmy.walkthroughs.primary.openCWView.description%",
+            "title": "%okxwasmy.walkthroughs.primary.openCWView.title%",
+            "description": "%okxwasmy.walkthroughs.primary.openCWView.description%",
             "completionEvents": [
               "onView:account"
             ],
             "media": {
               "image": "media/icon.png",
-              "altText": "Cosmy Wasmy logo"
+              "altText": "Okx Wasmy logo"
             }
           },
           {
             "id": "createKey",
-            "title": "%cosmywasmy.walkthroughs.primary.createKey.title%",
-            "description": "%cosmywasmy.walkthroughs.primary.createKey.description%",
+            "title": "%okxwasmy.walkthroughs.primary.createKey.title%",
+            "description": "%okxwasmy.walkthroughs.primary.createKey.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.addAccount"
+              "onCommand:okx-wasmy.addAccount"
             ],
             "media": {
               "image": "images/account.gif",
@@ -779,10 +779,10 @@
           },
           {
             "id": "changeChain",
-            "title": "%cosmywasmy.walkthroughs.primary.changeChain.title%",
-            "description": "%cosmywasmy.walkthroughs.primary.changeChain.description%",
+            "title": "%okxwasmy.walkthroughs.primary.changeChain.title%",
+            "description": "%okxwasmy.walkthroughs.primary.changeChain.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.reloadConfig"
+              "onCommand:okx-wasmy.reloadConfig"
             ],
             "media": {
               "image": "images/changeActiveChain.gif",
@@ -791,10 +791,10 @@
           },
           {
             "id": "importContract",
-            "title": "%cosmywasmy.walkthroughs.primary.importContract.title%",
-            "description": "%cosmywasmy.walkthroughs.primary.importContract.description%",
+            "title": "%okxwasmy.walkthroughs.primary.importContract.title%",
+            "description": "%okxwasmy.walkthroughs.primary.importContract.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.addContract"
+              "onCommand:okx-wasmy.addContract"
             ],
             "media": {
               "image": "images/contract.gif",
@@ -803,8 +803,8 @@
           },
           {
             "id": "executeContract",
-            "title": "%cosmywasmy.walkthroughs.primary.executeContract.title%",
-            "description": "%cosmywasmy.walkthroughs.primary.executeContract.description%",
+            "title": "%okxwasmy.walkthroughs.primary.executeContract.title%",
+            "description": "%okxwasmy.walkthroughs.primary.executeContract.description%",
             "completionEvents": [
               "onView:execute"
             ],
@@ -815,8 +815,8 @@
           },
           {
             "id": "simulateContract",
-            "title": "%cosmywasmy.walkthroughs.primary.simulateContract.title%",
-            "description": "%cosmywasmy.walkthroughs.primary.simulateContract.description%",
+            "title": "%okxwasmy.walkthroughs.primary.simulateContract.title%",
+            "description": "%okxwasmy.walkthroughs.primary.simulateContract.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -828,16 +828,16 @@
         ]
       },
       {
-        "id": "cosmy-wasmy.accounts",
-        "title": "%cosmywasmy.walkthroughs.accounts.title%",
-        "description": "%cosmywasmy.walkthroughs.accounts.description%",
+        "id": "okx-wasmy.accounts",
+        "title": "%okxwasmy.walkthroughs.accounts.title%",
+        "description": "%okxwasmy.walkthroughs.accounts.description%",
         "steps": [
           {
-            "id": "cosmy-wasmy.accounts.addNew",
-            "title": "%cosmywasmy.walkthroughs.accounts.addNew.title%",
-            "description": "%cosmywasmy.walkthroughs.accounts.addNew.description%",
+            "id": "okx-wasmy.accounts.addNew",
+            "title": "%okxwasmy.walkthroughs.accounts.addNew.title%",
+            "description": "%okxwasmy.walkthroughs.accounts.addNew.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.addAccount"
+              "onCommand:okx-wasmy.addAccount"
             ],
             "media": {
               "image": "images/account.gif",
@@ -845,9 +845,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.accounts.copyAddress",
-            "title": "%cosmywasmy.walkthroughs.accounts.copyAddress.title%",
-            "description": "%cosmywasmy.walkthroughs.accounts.copyAddress.description%",
+            "id": "okx-wasmy.accounts.copyAddress",
+            "title": "%okxwasmy.walkthroughs.accounts.copyAddress.title%",
+            "description": "%okxwasmy.walkthroughs.accounts.copyAddress.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -857,9 +857,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.accounts.copyMnemonic",
-            "title": "%cosmywasmy.walkthroughs.accounts.copyMnemonic.title%",
-            "description": "%cosmywasmy.walkthroughs.accounts.copyMnemonic.description%",
+            "id": "okx-wasmy.accounts.copyMnemonic",
+            "title": "%okxwasmy.walkthroughs.accounts.copyMnemonic.title%",
+            "description": "%okxwasmy.walkthroughs.accounts.copyMnemonic.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -869,9 +869,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.accounts.requestFunds",
-            "title": "%cosmywasmy.walkthroughs.accounts.requestFunds.title%",
-            "description": "%cosmywasmy.walkthroughs.accounts.requestFunds.description%",
+            "id": "okx-wasmy.accounts.requestFunds",
+            "title": "%okxwasmy.walkthroughs.accounts.requestFunds.title%",
+            "description": "%okxwasmy.walkthroughs.accounts.requestFunds.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -881,9 +881,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.accounts.deleteAccount",
-            "title": "%cosmywasmy.walkthroughs.accounts.deleteAccount.title%",
-            "description": "%cosmywasmy.walkthroughs.accounts.deleteAccount.description%",
+            "id": "okx-wasmy.accounts.deleteAccount",
+            "title": "%okxwasmy.walkthroughs.accounts.deleteAccount.title%",
+            "description": "%okxwasmy.walkthroughs.accounts.deleteAccount.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -893,11 +893,11 @@
             }
           },
           {
-            "id": "cosmy-wasmy.accounts.refresh",
-            "title": "%cosmywasmy.walkthroughs.accounts.refresh.title%",
-            "description": "%cosmywasmy.walkthroughs.accounts.refresh.description%",
+            "id": "okx-wasmy.accounts.refresh",
+            "title": "%okxwasmy.walkthroughs.accounts.refresh.title%",
+            "description": "%okxwasmy.walkthroughs.accounts.refresh.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.refreshAccount"
+              "onCommand:okx-wasmy.refreshAccount"
             ],
             "media": {
               "image": "walkthrough/account/refresh.gif",
@@ -907,16 +907,16 @@
         ]
       },
       {
-        "id": "cosmy-wasmy.contracts",
-        "title": "%cosmywasmy.walkthroughs.contracts.title%",
-        "description": "%cosmywasmy.walkthroughs.contracts.description%",
+        "id": "okx-wasmy.contracts",
+        "title": "%okxwasmy.walkthroughs.contracts.title%",
+        "description": "%okxwasmy.walkthroughs.contracts.description%",
         "steps": [
           {
-            "id": "cosmy-wasmy.contracts.import",
-            "title": "%cosmywasmy.walkthroughs.contracts.import.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.import.description%",
+            "id": "okx-wasmy.contracts.import",
+            "title": "%okxwasmy.walkthroughs.contracts.import.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.import.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.addContract"
+              "onCommand:okx-wasmy.addContract"
             ],
             "media": {
               "image": "walkthrough/contract/import.gif",
@@ -924,9 +924,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.contracts.notes",
-            "title": "%cosmywasmy.walkthroughs.contracts.notes.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.notes.description%",
+            "id": "okx-wasmy.contracts.notes",
+            "title": "%okxwasmy.walkthroughs.contracts.notes.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.notes.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -936,9 +936,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.contracts.copyAddr",
-            "title": "%cosmywasmy.walkthroughs.contracts.copyAddr.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.copyAddr.description%",
+            "id": "okx-wasmy.contracts.copyAddr",
+            "title": "%okxwasmy.walkthroughs.contracts.copyAddr.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.copyAddr.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -948,9 +948,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.contracts.checksum",
-            "title": "%cosmywasmy.walkthroughs.contracts.checksum.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.checksum.description%",
+            "id": "okx-wasmy.contracts.checksum",
+            "title": "%okxwasmy.walkthroughs.contracts.checksum.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.checksum.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -960,9 +960,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.contracts.binary",
-            "title": "%cosmywasmy.walkthroughs.contracts.binary.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.binary.description%",
+            "id": "okx-wasmy.contracts.binary",
+            "title": "%okxwasmy.walkthroughs.contracts.binary.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.binary.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -972,9 +972,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.contracts.adminChange",
-            "title": "%cosmywasmy.walkthroughs.contracts.adminChange.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.adminChange.description%",
+            "id": "okx-wasmy.contracts.adminChange",
+            "title": "%okxwasmy.walkthroughs.contracts.adminChange.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.adminChange.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -984,9 +984,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.contracts.deleteContract",
-            "title": "%cosmywasmy.walkthroughs.contracts.deleteContract.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.deleteContract.description%",
+            "id": "okx-wasmy.contracts.deleteContract",
+            "title": "%okxwasmy.walkthroughs.contracts.deleteContract.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.deleteContract.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -996,11 +996,11 @@
             }
           },
           {
-            "id": "cosmy-wasmy.contracts.upload",
-            "title": "%cosmywasmy.walkthroughs.contracts.upload.title%",
-            "description": "%cosmywasmy.walkthroughs.contracts.upload.description%",
+            "id": "okx-wasmy.contracts.upload",
+            "title": "%okxwasmy.walkthroughs.contracts.upload.title%",
+            "description": "%okxwasmy.walkthroughs.contracts.upload.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.upload"
+              "onCommand:okx-wasmy.upload"
             ],
             "media": {
               "image": "walkthrough/contract/upload.gif",
@@ -1010,16 +1010,16 @@
         ]
       },
       {
-        "id": "cosmy-wasmy.notebooks",
-        "title": "%cosmywasmy.walkthroughs.notebooks.title%",
-        "description": "%cosmywasmy.walkthroughs.notebooks.description%",
+        "id": "okx-wasmy.notebooks",
+        "title": "%okxwasmy.walkthroughs.notebooks.title%",
+        "description": "%okxwasmy.walkthroughs.notebooks.description%",
         "steps": [
           {
-            "id": "cosmy-wasmy.notebook.new",
-            "title": "%cosmywasmy.walkthroughs.notebooks.new.title%",
-            "description": "%cosmywasmy.walkthroughs.notebooks.new.description%",
+            "id": "okx-wasmy.notebook.new",
+            "title": "%okxwasmy.walkthroughs.notebooks.new.title%",
+            "description": "%okxwasmy.walkthroughs.notebooks.new.description%",
             "completionEvents": [
-              "onCommand:cosmy-wasmy.createCwNotebook",
+              "onCommand:okx-wasmy.createCwNotebook",
               "onCommand:workbench.action.files.openFolder",
               "onCommand:workbench.action.files.openFileFolder"
             ],
@@ -1029,9 +1029,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.notebook.setup",
-            "title": "%cosmywasmy.walkthroughs.notebooks.setup.title%",
-            "description": "%cosmywasmy.walkthroughs.notebooks.setup.description%",
+            "id": "okx-wasmy.notebook.setup",
+            "title": "%okxwasmy.walkthroughs.notebooks.setup.title%",
+            "description": "%okxwasmy.walkthroughs.notebooks.setup.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -1040,9 +1040,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.notebook.run",
-            "title": "%cosmywasmy.walkthroughs.notebooks.run.title%",
-            "description": "%cosmywasmy.walkthroughs.notebooks.run.description%",
+            "id": "okx-wasmy.notebook.run",
+            "title": "%okxwasmy.walkthroughs.notebooks.run.title%",
+            "description": "%okxwasmy.walkthroughs.notebooks.run.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -1054,14 +1054,14 @@
         ]
       },
       {
-        "id": "cosmy-wasmy.cosmwasm",
-        "title": "%cosmywasmy.walkthroughs.cosmwasm.title%",
-        "description": "%cosmywasmy.walkthroughs.cosmwasm.description%",
+        "id": "okx-wasmy.cosmwasm",
+        "title": "%okxwasmy.walkthroughs.cosmwasm.title%",
+        "description": "%okxwasmy.walkthroughs.cosmwasm.description%",
         "steps": [
           {
-            "id": "cosmy-wasmy.cosmwasm.initialize",
-            "title": "%cosmywasmy.walkthroughs.cosmwasm.initialize.title%",
-            "description": "%cosmywasmy.walkthroughs.cosmwasm.initialize.description%",
+            "id": "okx-wasmy.cosmwasm.initialize",
+            "title": "%okxwasmy.walkthroughs.cosmwasm.initialize.title%",
+            "description": "%okxwasmy.walkthroughs.cosmwasm.initialize.description%",
             "completionEvents": [
               "onView:intialize"
             ],
@@ -1071,9 +1071,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.cosmwasm.query",
-            "title": "%cosmywasmy.walkthroughs.cosmwasm.query.title%",
-            "description": "%cosmywasmy.walkthroughs.cosmwasm.query.description%",
+            "id": "okx-wasmy.cosmwasm.query",
+            "title": "%okxwasmy.walkthroughs.cosmwasm.query.title%",
+            "description": "%okxwasmy.walkthroughs.cosmwasm.query.description%",
             "completionEvents": [
               "onView:query"
             ],
@@ -1083,9 +1083,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.cosmwasm.execute",
-            "title": "%cosmywasmy.walkthroughs.cosmwasm.execute.title%",
-            "description": "%cosmywasmy.walkthroughs.cosmwasm.execute.description%",
+            "id": "okx-wasmy.cosmwasm.execute",
+            "title": "%okxwasmy.walkthroughs.cosmwasm.execute.title%",
+            "description": "%okxwasmy.walkthroughs.cosmwasm.execute.description%",
             "completionEvents": [
               "onView:execute"
             ],
@@ -1095,9 +1095,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.cosmwasm.autocomplete",
-            "title": "%cosmywasmy.walkthroughs.cosmwasm.autocomplete.title%",
-            "description": "%cosmywasmy.walkthroughs.cosmwasm.autocomplete.description%",
+            "id": "okx-wasmy.cosmwasm.autocomplete",
+            "title": "%okxwasmy.walkthroughs.cosmwasm.autocomplete.title%",
+            "description": "%okxwasmy.walkthroughs.cosmwasm.autocomplete.description%",
             "completionEvents": [
               "onStepSelected"
             ],
@@ -1107,9 +1107,9 @@
             }
           },
           {
-            "id": "cosmy-wasmy.cosmwasm.history",
-            "title": "%cosmywasmy.walkthroughs.cosmwasm.history.title%",
-            "description": "%cosmywasmy.walkthroughs.cosmwasm.history.description%",
+            "id": "okx-wasmy.cosmwasm.history",
+            "title": "%okxwasmy.walkthroughs.cosmwasm.history.title%",
+            "description": "%okxwasmy.walkthroughs.cosmwasm.history.description%",
             "completionEvents": [
               "onStepSelected"
             ],

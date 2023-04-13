@@ -18,4 +18,4 @@ jobs:
         uses: gitopia/gitopia-mirror-action@v0.5.0
         with:
           gitopiaWallet: "${{ secrets.GITOPIA_WALLET }}"
-          remoteUrl: "gitopia://gitopia1t579lcjc62dxlw5p9ff6wudkmwfhx8j7zvru9l/cosmywasmy"
+          remoteUrl: "gitopia://gitopia1t579lcjc62dxlw5p9ff6wudkmwfhx8j7zvru9l/okxwasmy"

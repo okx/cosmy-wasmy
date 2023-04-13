@@ -1,13 +1,13 @@
 export class Constants {
 
-    public static readonly STORE_KEY = "cosmy-wasmy";
+    public static readonly STORE_KEY = "okx-wasmy";
 
-    public static readonly CONFIGURATION_CHAIN_CONFIG_NAME = "cosmywasmy.chainConfigName";
-    public static readonly CONFIGURATION_CHAINS = "cosmywasmy.chains";
-    public static readonly CONFIGURATION_CONTRACT_SORT_ORDER = "cosmywasmy.contractSortOrder";
-    public static readonly CONFIGURATION_COSMWASM_RESPONSE_VIEW = "cosmywasmy.cosmwasmResponseView";
-    public static readonly CONFIGURATION_HISTORY_STORED = "cosmywasmy.maxHistoryStored";
-    public static readonly CONFIGURATION_OPEN_TX_IN_VSCODE = "cosmywasmy.openTxExplorerInVscode";
+    public static readonly CONFIGURATION_CHAIN_CONFIG_NAME = "okxwasmy.chainConfigName";
+    public static readonly CONFIGURATION_CHAINS = "okxwasmy.chains";
+    public static readonly CONFIGURATION_CONTRACT_SORT_ORDER = "okxwasmy.contractSortOrder";
+    public static readonly CONFIGURATION_COSMWASM_RESPONSE_VIEW = "okxwasmy.cosmwasmResponseView";
+    public static readonly CONFIGURATION_HISTORY_STORED = "okxwasmy.maxHistoryStored";
+    public static readonly CONFIGURATION_OPEN_TX_IN_VSCODE = "okxwasmy.openTxExplorerInVscode";
     public static readonly CONFIGURATION_BEAKER_AUTOSYNC = "beaker.autosync";
     
     public static readonly VIEWS_ACCOUNT = "account";

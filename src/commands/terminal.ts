@@ -14,7 +14,7 @@ export class TerminalCmds {
 	}
 
 	private static registerBuildCmd(context: vscode.ExtensionContext, terminal: CosmwasmTerminal) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.build', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.build', async () => {
 			terminal.build();
 		});
 
@@ -22,7 +22,7 @@ export class TerminalCmds {
 	}
 
 	private static registerRunUnitTestsCmd(context: vscode.ExtensionContext, terminal: CosmwasmTerminal) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.runUnitTests', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.runUnitTests', async () => {
 			terminal.unitTests();
 		});
 
@@ -30,7 +30,7 @@ export class TerminalCmds {
 	}
 
 	private static registerOptimizeContractCmd(context: vscode.ExtensionContext, terminal: CosmwasmTerminal) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.optimizeContract', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.optimizeContract', async () => {
 			terminal.optimize();
 		});
 
@@ -38,7 +38,7 @@ export class TerminalCmds {
 	}
 
 	private static registerGenerateSchemaCmd(context: vscode.ExtensionContext, terminal: CosmwasmTerminal) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.generateSchema', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.generateSchema', async () => {
 			terminal.schema();
 			const schema = [{
 				fileMatch: [
@@ -68,7 +68,7 @@ export class TerminalCmds {
 	}
 
 	private static registerSetUpDevEnvCmd(context: vscode.ExtensionContext, terminal: CosmwasmTerminal) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.setupDevEnv', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.setupDevEnv', async () => {
 			terminal.setupDevEnv();
 		});
 

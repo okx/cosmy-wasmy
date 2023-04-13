@@ -22,7 +22,7 @@ export class ContractCmds {
 	}
 
 	private static registerAddContractCmd(context: vscode.ExtensionContext, contractViewProvider: ContractDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.addContract', (contractAddr: string) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.addContract', (contractAddr: string) => {
 			if (contractAddr) {
 				importContract(contractAddr);
 			}
@@ -79,14 +79,14 @@ export class ContractCmds {
 	}
 
 	private static registerSelectContractCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.selectContract', (contract: Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.selectContract', (contract: Contract) => {
 			Workspace.SetSelectedContract(contract);
 		});
 		context.subscriptions.push(disposable);
 	}
 
 	private static registerDeleteContractCmd(context: vscode.ExtensionContext, contractViewProvider: ContractDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.deleteContract', (item: Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.deleteContract', (item: Contract) => {
 			vscode.window.showQuickPick(["Yes", "No"], {
 				title: vscode.l10n.t("Are you sure you want to delete the contract {label}?", {
 					label: item.label
@@ -107,7 +107,7 @@ export class ContractCmds {
 	}
 
 	private static registerUpdateContractAdminCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.updateContractAdmin', (contract: Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.updateContractAdmin', (contract: Contract) => {
 			vscode.window.showInputBox({
 				title: vscode.l10n.t("New contract admin address"),
 				prompt: vscode.l10n.t("New contract admin address")
@@ -136,7 +136,7 @@ export class ContractCmds {
 	}
 
 	private static registerClearContractAdminCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.clearContractAdmin', (contract: Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.clearContractAdmin', (contract: Contract) => {
 			const account = Workspace.GetSelectedAccount();
 			if (!account) {
 				vscode.window.showErrorMessage(vscode.l10n.t("No account selected. Select an account from the Accounts view."));
@@ -158,7 +158,7 @@ export class ContractCmds {
 	}
 
 	private static registerAddContractCommentCmd(context: vscode.ExtensionContext, contractViewProvider: ContractDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.addComments', (contract: Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.addComments', (contract: Contract) => {
 			if (contract) {
 				vscode.window.showInputBox({
 					title: vscode.l10n.t("Add comments/notes for the contract"),
@@ -178,7 +178,7 @@ export class ContractCmds {
 	}
 
 	private static registerUploadContractCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.upload', (item: vscode.Uri) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.upload', (item: vscode.Uri) => {
 			if (item) {
 				Contract.Upload(item)
 			}
@@ -205,7 +205,7 @@ export class ContractCmds {
 	}
 
 	private static registerWasmVMCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.wasmInteract', async (wasm: vscode.Uri) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.wasmInteract', async (wasm: vscode.Uri) => {
 			const contractName = path.basename(wasm.toString());
 			const panel = vscode.window.createWebviewPanel(
 				'wasm-vm',
@@ -225,7 +225,7 @@ export class ContractCmds {
 	}
 
 	private static registerGetContractChecksumCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.getContractChecksum', async (contract: Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.getContractChecksum', async (contract: Contract) => {
 			const codeId = contract.codeId;
 			const codeDetails = await CosmwasmAPI.GetCodeDetails(codeId);
 			const output = {
@@ -238,7 +238,7 @@ export class ContractCmds {
 	}
 
 	private static registerDownloadContractBinaryCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.downloadContractBinary', async (contract: Contract) => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.downloadContractBinary', async (contract: Contract) => {
 			const codeId = contract.codeId;
 			const codeDetails = await CosmwasmAPI.GetCodeDetails(codeId);
 			const binary = codeDetails.data;

@@ -11,7 +11,7 @@ export class WorkspaceDataCmds {
 	}
 
 	private static registerExportDataCmd(context: vscode.ExtensionContext) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.export', async () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.export', async () => {
 			const data = ExtData.GetExtensionData(context.globalState);
 			data.accounts = await Account.GetAccounts(context.globalState);
 			vscode.workspace.openTextDocument({
@@ -26,14 +26,14 @@ export class WorkspaceDataCmds {
 	}
 
 	private static registerResetDataCmd(context: vscode.ExtensionContext, accountViewProvider: AccountDataProvider, contractViewProvider: ContractDataProvider) {
-		let disposable = vscode.commands.registerCommand('cosmy-wasmy.resetData', () => {
+		let disposable = vscode.commands.registerCommand('okx-wasmy.resetData', () => {
 			vscode.window.showQuickPick(["Yes", "No"], {
 				title: vscode.l10n.t("Are you sure you want to delete all data?"),
 				placeHolder: vscode.l10n.t("Are you sure you want to delete all data?")
 			}).then(resp => {
 				if (resp && resp.toLowerCase() === "yes") {
 					ExtData.ResetExtensionData(context.globalState);
-					vscode.window.showInformationMessage(vscode.l10n.t('All cosmy wasmy data was reset!'));
+					vscode.window.showInformationMessage(vscode.l10n.t('All okx wasmy data was reset!'));
 					var data = ExtData.GetExtensionData(context.globalState);
 					accountViewProvider.refresh(data.accounts);
 					contractViewProvider.refresh(data.contracts);

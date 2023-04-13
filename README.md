@@ -1,19 +1,19 @@
-# Cosmy Wasmy
+# Okx Wasmy
 
 <p align="center">
-<a href="https://marketplace.visualstudio.com/items?itemName=spoorthi.cosmy-wasmy">
-    <img src="https://raw.githubusercontent.com/spoo-bar/cosmy-wasmy/0c072775ba3970e9b4c5cfbbf4825ecdbdb16868/media/icon-small.png" alt="Cosmy Wasmy logo" title="Cosmy Wasmy" align="center" />
+<a href="https://marketplace.visualstudio.com/items?itemName=spoorthi.okx-wasmy">
+    <img src="https://raw.githubusercontent.com/spoo-bar/okx-wasmy/0c072775ba3970e9b4c5cfbbf4825ecdbdb16868/media/icon-small.png" alt="Okx Wasmy logo" title="Okx Wasmy" align="center" />
 </a>
 </p>
 
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/spoorthi.cosmy-wasmy)
-![Visual Studio Marketplace Last Updated](https://img.shields.io/visual-studio-marketplace/last-updated/spoorthi.cosmy-wasmy)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/spoo-bar/cosmy-wasmy)
-[![CodeQL](https://github.com/spoo-bar/cosmy-wasmy/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/spoo-bar/cosmy-wasmy/actions/workflows/codeql-analysis.yml)
-[![Mirror to Gitopia](https://github.com/spoo-bar/cosmy-wasmy/actions/workflows/gitopia-mirror.yml/badge.svg)](https://github.com/spoo-bar/cosmy-wasmy/actions/workflows/gitopia-mirror.yml)
-![GitHub](https://img.shields.io/github/license/spoo-bar/cosmy-wasmy)
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/spoorthi.okx-wasmy)
+![Visual Studio Marketplace Last Updated](https://img.shields.io/visual-studio-marketplace/last-updated/spoorthi.okx-wasmy)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/spoo-bar/okx-wasmy)
+[![CodeQL](https://github.com/spoo-bar/okx-wasmy/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/spoo-bar/okx-wasmy/actions/workflows/codeql-analysis.yml)
+[![Mirror to Gitopia](https://github.com/spoo-bar/okx-wasmy/actions/workflows/gitopia-mirror.yml/badge.svg)](https://github.com/spoo-bar/okx-wasmy/actions/workflows/gitopia-mirror.yml)
+![GitHub](https://img.shields.io/github/license/spoo-bar/okx-wasmy)
 
-Cosmy Wasmy makes it easy to develop and interact with a [CosmWasm](https://github.com/CosmWasm/cosmwasm) smart contracts. With the most popular Cosmwasm chains testnets pre-configured, it makes chain interactions during testing super simple. You can perform all Cosmwasm interactions without touching the CLI.
+Okx Wasmy makes it easy to develop and interact with a [CosmWasm](https://github.com/CosmWasm/cosmwasm) smart contracts. With the most popular Cosmwasm chains testnets pre-configured, it makes chain interactions during testing super simple. You can perform all Cosmwasm interactions without touching the CLI.
 
 Find release notes in [CHANGELOG](CHANGELOG.md)
 
@@ -42,7 +42,7 @@ Find release notes in [CHANGELOG](CHANGELOG.md)
 
 ## Getting Started
 
-This section is intended to give you an introduction to using Cosmy Wasmy.
+This section is intended to give you an introduction to using Okx Wasmy.
 
 ### Prerequisites
 
@@ -57,9 +57,9 @@ This section is intended to give you an introduction to using Cosmy Wasmy.
 ---
 ## Installation
 
-You can install Cosmy Wasmy from the [visual studio marketplace](https://marketplace.visualstudio.com/items?itemName=spoorthi.cosmy-wasmy) 
+You can install Okx Wasmy from the [visual studio marketplace](https://marketplace.visualstudio.com/items?itemName=spoorthi.okx-wasmy) 
 
-Or, you can search for `Cosmy Wasmy` in vscode Extensions sidebar. 
+Or, you can search for `Okx Wasmy` in vscode Extensions sidebar. 
 
 > **Note**
 >
@@ -76,7 +76,7 @@ Its recommended post installation to configure the extension for your use case. 
 
 2. Import accounts
 
-    If you have any prior test accounts, you can import them by going to the Cosmy Wasmy sidebar and adding a new account in the Account view. Or you can choose to create a new account as well. 
+    If you have any prior test accounts, you can import them by going to the Okx Wasmy sidebar and adding a new account in the Account view. Or you can choose to create a new account as well. 
 
     ![Add account](./images/account.gif)
 
@@ -92,7 +92,7 @@ Its recommended post installation to configure the extension for your use case. 
 
 4. Explore the settings
 
-    Explore all the configurations available in the extension by going to `File > Preferences > Settings > Extensions > Cosmy Wasmy`. 
+    Explore all the configurations available in the extension by going to `File > Preferences > Settings > Extensions > Okx Wasmy`. 
 
 ---
 
@@ -113,19 +113,19 @@ The following chains are pre-configured by default. Any other chains can be manu
 | 9 | [OKTC](https://www.okx.com/oktc)       | testnet     | exchain-65    |
 
 You can set up the extension settings at
-> File > Preferences > Settings > Extensions > Cosmy Wasmy
+> File > Preferences > Settings > Extensions > Okx Wasmy
 
 | Setting | Type | Default  | Scope | Details |
 | --------|------|----------|-------|---------|
-| [Deprecated] ~~`cosmywasmy.chainConfigName`~~ | ~~string~~ | ~~Juno UNI-5~~ | ~~Workspace~~ | ~~This setting is used to select which of the given Chain configs is to be used in this workspace~~ |
-| `cosmywasmy.chains`  | json   | *Refer above* | Application | Stores an array of JSON objects which contains the chain config details. <br />  The structure of the expected setting is elaborated below this table  |
-| `cosmywasmy.contractSortOrder` | enum   | None | Workspace | Controls the sorting order of the Smart Contracts in the Contract view <br /> * Alphabetical - Sort by the label<br /> * CodeId - Sort by the Code ID<br /> * None - No explicit sorting - Maintains the order the contracts were imported in |
-| `cosmywasmy.cosmwasmResponseView` | enum   | Terminal | Workspace | Controls where the smart contract responses should be displayed <br /> * NewFile - Open a new dummy doc with response <br /> * Terminal -  A separate output channel by Cosmy Wasmy in the Output view |
-| `cosmywasmy.maxHistoryStored` | number | 20 | Workspace | Controls the latest number of queries and txs kept in history for easy re-execution. If set to `0` the feature is disabled and nothing is stored |
-| `cosmywasmy.openTxExplorerInVscode` | bool | false | Workspace | Controls if tx should be opened in block explorer within vscode |
+| [Deprecated] ~~`okxwasmy.chainConfigName`~~ | ~~string~~ | ~~Juno UNI-5~~ | ~~Workspace~~ | ~~This setting is used to select which of the given Chain configs is to be used in this workspace~~ |
+| `okxwasmy.chains`  | json   | *Refer above* | Application | Stores an array of JSON objects which contains the chain config details. <br />  The structure of the expected setting is elaborated below this table  |
+| `okxwasmy.contractSortOrder` | enum   | None | Workspace | Controls the sorting order of the Smart Contracts in the Contract view <br /> * Alphabetical - Sort by the label<br /> * CodeId - Sort by the Code ID<br /> * None - No explicit sorting - Maintains the order the contracts were imported in |
+| `okxwasmy.cosmwasmResponseView` | enum   | Terminal | Workspace | Controls where the smart contract responses should be displayed <br /> * NewFile - Open a new dummy doc with response <br /> * Terminal -  A separate output channel by Okx Wasmy in the Output view |
+| `okxwasmy.maxHistoryStored` | number | 20 | Workspace | Controls the latest number of queries and txs kept in history for easy re-execution. If set to `0` the feature is disabled and nothing is stored |
+| `okxwasmy.openTxExplorerInVscode` | bool | false | Workspace | Controls if tx should be opened in block explorer within vscode |
 | `beaker.autosync` | bool | true | Machine | Controls if any accounts configured in Beaker.toml are automatically loaded into the extension |
 
-The structure of the expected setting for `cosmywasamy.chains`:
+The structure of the expected setting for `okxwasamy.chains`:
 ```json
 [
     {
@@ -155,17 +155,17 @@ All the given keybindings can be customized
 
 | Title | Command | Keybinding | Details | 
 |-----------------------|-------------------------|------------|---------| 
-| Setup Dev Environment | cosmy-wasmy.setupDevEnv |   | Installs rust and cargo dependencies |
-| Build                 | cosmy-wasmy.build  | ctrl+shift+b | Builds the project and generates the non-optimized wasm file | 
-| Run Unit Tests        | cosmy-wasmy.runUnitTests     | ctrl+shift+t | Runs all the unit tests in the project | 
-| Optimize Contract     | cosmy-wasmy.optimizeContract | ctrl+shift+o | Runs the docker contract-optimizer and generates an optimized wasm artifact - Needs docker running | 
-| Generate Schema       | cosmy-wasmy.generateSchema | ctrl+shift+g | Generates json-schema using the Rust schema files. This enables autocomplete for the query and tx json | 
-| Upload Contract       | cosmy-wasmy.upload         | ctrl+shift+u | Uploads a wasm file to selected chain with selected account. <br /> Right clicking on a wasm file shows this command in the context menu or command can be invocated using Command Palette/Key Binding and file dialog opens to select a wasm file <br /> Can also be invoked by clicking on the Upload icon in the Contract view | 
-| Reload Chain Config   | cosmy-wasmy.reloadConfig   | | Opens a quick pick menu for the user to pick a new chain for the current workspace |
-| Reset Data            | cosmy-wasmy.resetData      | | Deletes all the extension stored data, like accounts and contracts. | 
-| Show Cosmwasm History | cosmy-wasmy.history | ctrl+shift+a | Shows latest queries and transactions and with saved inputs. Allows easy re-execution of same queries. The number of saved queries is configurable in the settings. | 
-| Export Cosmy Wasmy data | cosmy-wasmy.export |  | Export imported accounts, all imported contracts and history as a JSON file. Careful sharing this file with others as it will include your seed phrase | 
-| Create a new CW Notebook | cosmy-wasmy.createCwNotebook |   | Create a new CW Notebook with some sample content |
+| Setup Dev Environment | okx-wasmy.setupDevEnv |   | Installs rust and cargo dependencies |
+| Build                 | okx-wasmy.build  | ctrl+shift+b | Builds the project and generates the non-optimized wasm file | 
+| Run Unit Tests        | okx-wasmy.runUnitTests     | ctrl+shift+t | Runs all the unit tests in the project | 
+| Optimize Contract     | okx-wasmy.optimizeContract | ctrl+shift+o | Runs the docker contract-optimizer and generates an optimized wasm artifact - Needs docker running | 
+| Generate Schema       | okx-wasmy.generateSchema | ctrl+shift+g | Generates json-schema using the Rust schema files. This enables autocomplete for the query and tx json | 
+| Upload Contract       | okx-wasmy.upload         | ctrl+shift+u | Uploads a wasm file to selected chain with selected account. <br /> Right clicking on a wasm file shows this command in the context menu or command can be invocated using Command Palette/Key Binding and file dialog opens to select a wasm file <br /> Can also be invoked by clicking on the Upload icon in the Contract view | 
+| Reload Chain Config   | okx-wasmy.reloadConfig   | | Opens a quick pick menu for the user to pick a new chain for the current workspace |
+| Reset Data            | okx-wasmy.resetData      | | Deletes all the extension stored data, like accounts and contracts. | 
+| Show Cosmwasm History | okx-wasmy.history | ctrl+shift+a | Shows latest queries and transactions and with saved inputs. Allows easy re-execution of same queries. The number of saved queries is configurable in the settings. | 
+| Export Okx Wasmy data | okx-wasmy.export |  | Export imported accounts, all imported contracts and history as a JSON file. Careful sharing this file with others as it will include your seed phrase | 
+| Create a new CW Notebook | okx-wasmy.createCwNotebook |   | Create a new CW Notebook with some sample content |
 
 ---
 
@@ -193,7 +193,7 @@ Once an account has been created, you can do the following actions
 
 * Open in Block Explorer (if `accountExplorerLink` has been set up for currently active chain)
 
-If you see an account balance as `NaN`, it probably means your RPC endpoint is not reachable. Ensure the endpoint is reachable and run `cosmy-wasmy.refreshAccount` to fetch the account balances.
+If you see an account balance as `NaN`, it probably means your RPC endpoint is not reachable. Ensure the endpoint is reachable and run `okx-wasmy.refreshAccount` to fetch the account balances.
 
 #### Beaker Integration
 
@@ -315,11 +315,11 @@ The extension does not implement any Rust language features as it is recommended
 The extension provides Walkthroughs for the major features. You can access the walkthroughs by going to Command Palette (Windows: `Ctrl+Shft+P`, MacOS: `Cmd+Shft+P`, Linux: `Ctrl+Shft+P`) and selecting **"Welcome: Open Walkthrough"**
 
 There are five walkthroughs available:
-1. Getting Started with Cosmy Wasmy
-2. Cosmy Wasmy: Accounts
-3. Cosmy Wasmy: Contracts
-4. Cosmy Wasmy: CW Notebooks
-5. Cosmy Wasmy: Cosmwasm Interactions
+1. Getting Started with Okx Wasmy
+2. Okx Wasmy: Accounts
+3. Okx Wasmy: Contracts
+4. Okx Wasmy: CW Notebooks
+5. Okx Wasmy: Cosmwasm Interactions
 
 It is recommended to run through them as they provide detailed information on how to use the extension.
 
@@ -332,17 +332,17 @@ Big shoutout to [aswever](https://github.com/aswever), early feature inspiration
 Another shoutout to [
 TERRAN.ONE](https://twitter.com/terran_one) team for building the [cw-simulate](https://github.com/Terran-One/cw-simulate) library. 
 
-Thanks to [Osmosis Grants](https://grants.osmosis.zone/) for funding the work for the [v2](https://github.com/spoo-bar/cosmy-wasmy/releases/tag/v2.0.0) release of the extension.
+Thanks to [Osmosis Grants](https://grants.osmosis.zone/) for funding the work for the [v2](https://github.com/spoo-bar/okx-wasmy/releases/tag/v2.0.0) release of the extension.
 
-Thanks to [Barry](https://github.com/zjg555543) from [OKX](https://github.com/okx) for all major contributions to [v2.2](https://github.com/spoo-bar/cosmy-wasmy/releases/tag/v2.2.0) release
+Thanks to [Barry](https://github.com/zjg555543) from [OKX](https://github.com/okx) for all major contributions to [v2.2](https://github.com/spoo-bar/okx-wasmy/releases/tag/v2.2.0) release
 
 And the consistent support I have found in the Cosmos and Cosmwasm community which motivates me to work on this extension 💜
 
 If you would like to support this extension, you can:
 
-1. Create issues for any bugs you encounter [here](https://github.com/spoo-bar/cosmy-wasmy/issues/new?assignees=spoo-bar&labels=&template=bug_report.md&title=)
+1. Create issues for any bugs you encounter [here](https://github.com/spoo-bar/okx-wasmy/issues/new?assignees=spoo-bar&labels=&template=bug_report.md&title=)
 
-2. Share what features you might be interested  [here](https://github.com/spoo-bar/cosmy-wasmy/issues/new?assignees=&labels=&template=feature_request.md&title=)
+2. Share what features you might be interested  [here](https://github.com/spoo-bar/okx-wasmy/issues/new?assignees=&labels=&template=feature_request.md&title=)
 
 3. [Contribute](./CONTRIBUTING.md) to the extension - PRs are always welcome
 

@@ -19,7 +19,7 @@ export class CosmwasmTerminal {
                     hideFromUser: true,
                     location: vscode.TerminalLocation.Panel,
                     name: "Cosmwasm",
-                    message: "Cosmwasm terminal - created by Cosmy Wasmy ⚛️"
+                    message: "Cosmwasm terminal - created by Okx Wasmy ⚛️"
                 });
             }
         }

@@ -54,7 +54,7 @@ export class Workspace {
             }
             return this.GetChainConfig(configName);
         }
-        throw new Error(vscode.l10n.t("Chain settings have not been configured. Please set them up in File > Preferences > Settings > Cosmy Wasmy."));
+        throw new Error(vscode.l10n.t("Chain settings have not been configured. Please set them up in File > Preferences > Settings > Okx Wasmy."));
     }
 
     public static GetContractSortOrder(): ContractSortOrder {
